@@ -46,11 +46,16 @@ document.addEventListener("DOMContentLoaded", function () {
     function bottomLoop(friendArr) {
         for (let j = count; j > 0; j--) {
             let p = document.createElement('p');
-            if (j > 1) {
+            if (j > 2) {
                 z = j - 1;
                 x = document.createTextNode(name + " saw " + j + " aliens in the sky, " + nameWithColon + " saw " + j + " aliens. Shoot one down. Take one to a secret base in Nevada, and deny it's existance. " + z + " aliens in the sky.");
                 p.appendChild(x);
                 div.appendChild(p);
+            } else if (j === 2) {
+                z = j - 1;
+                x = document.createTextNode(name + " saw " + j + " aliens in the sky, " + nameWithColon + " saw " + j + " aliens. Shoot one down. Take one to a secret base in Nevada, and deny it's existance. " + z + " alien in the sky.");
+                p.appendChild(x);
+                div.appendChild(p); 
             } else {
                 y = document.createTextNode(name + " saw " + j + " alien in the sky. " + nameWithColon + " saw " + j + " alien. Shoot one down. Take it to a secret base in Nevada, and deny it's existance. No more aliens in the sky.");
                 p.appendChild(y);
